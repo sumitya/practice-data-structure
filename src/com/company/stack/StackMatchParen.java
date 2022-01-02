@@ -30,7 +30,7 @@ public class StackMatchParen {
     public static boolean hasMatchingParen(String input){
         try{
 
-            Stack<Character> parenStack = new Stack<>();
+            Stack<Character> parenStack = new Stack<Character>();
             for(int i=0; i < input.length();i++){
                 char ch = input.charAt(i);
 
