@@ -64,10 +64,10 @@ public class LinkedListClass {
     }
     public static Node addNewNodeToEndLL(Node headExistingLL, Node toBeAdded) {
         Node temp = headExistingLL;
-        while(temp != null) {
+        while(temp.next != null) {
             temp = temp.next;
         }
-        temp = toBeAdded;
+        temp.next = toBeAdded;
         return headExistingLL;
     }
 }
