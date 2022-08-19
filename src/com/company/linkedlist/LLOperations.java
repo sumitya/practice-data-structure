@@ -11,7 +11,7 @@ public class LLOperations {
         }
     }
 
-    public static void insert_node(int position, int value) {
+    public static void insertNode(int position, int value) {
         if(position>length+1) {
             return;
         }
@@ -34,7 +34,7 @@ public class LLOperations {
         length++;
     }
 
-    public static void delete_node(int position) {
+    public static void deleteNode(int position) {
         if(position>length) {
             return ;
         }
@@ -52,7 +52,7 @@ public class LLOperations {
         length--;
     }
 
-    public static void print_ll() {
+    public static void printLL() {
         if(length == 0) {
             return;
         }

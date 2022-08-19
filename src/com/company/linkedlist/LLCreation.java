@@ -1,10 +1,7 @@
 package com.company.linkedlist;
 
-class Node{
-    int data;
-    Node next;
-}
-public class LinkedListClass {
+
+public class LLCreation {
     public static void main(String[] args) {
         Node addressExistingLL = createLL();
         traverseLL(addressExistingLL);
@@ -40,7 +37,7 @@ public class LinkedListClass {
         System.out.println(count);
     }
     public static Node createNodeLL(int val) {
-        Node node = new Node();
+        Node node = new Node(val);
         node.data = val;
         node.next = null;
         return node;
