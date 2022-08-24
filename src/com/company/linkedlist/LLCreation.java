@@ -22,10 +22,13 @@ public class LLCreation {
     }
     public static void traverseLL(Node node) {
         Node address = node;
+        System.out.print("head ->");
         while(address != null) {
-            System.out.println(address.data);
+            System.out.print(" [ "+address.data+" ]->");
             address = address.next;
         }
+        System.out.print("NULL");
+        System.out.println();
     }
     public static void countNodesLL(Node node) {
         int count = 0;
@@ -41,6 +44,17 @@ public class LLCreation {
         node.data = val;
         node.next = null;
         return node;
+    }
+
+    public static Node createLL(int[] numbers) {
+        Node head = createNodeLL(numbers[0]);
+        Node temp = head;
+        for(int i = 1 ; i < numbers.length; i++) {
+            Node currNode = createNodeLL(numbers[i]);
+            temp.next = currNode;
+            temp = temp.next;
+        }
+        return head;
     }
     public static Node createLL() {
         //                                     temp20        temp
