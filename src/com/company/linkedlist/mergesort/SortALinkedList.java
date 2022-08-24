@@ -5,25 +5,36 @@ import com.company.linkedlist.Node;
 
 import static com.company.linkedlist.LLCreation.createLL;
 
-public class MergeSortTwoLL {
+public class SortALinkedList {
     public static void main(String[] args) {
-        Node list1 = createLL(new int[]{7,10,12});
-        Node list2 = createLL(new int[]{8,9});
-        LLCreation.traverseLL(list1);
-        LLCreation.traverseLL(list2);
-        Node headOfMergedList = merge(list1,list2);
-
-        LLCreation.traverseLL(headOfMergedList);
+        LLCreation.traverseLL(sortList(createLL(new int[]{7,12,10,5})));
     }
-    public static Node mergeSort(Node head) {
-        if(head == null) return null;
+    public static Node sortList(Node A) {
+        Node head = A;
+        if(head == null) return head;
         if(head.next == null) return head;
-        if(head.next == null) return head;
-        if(head.next == null) return head;
-        return head;
+
+        Node mid = findMid(head);
+        Node headR = mid.next;
+        mid.next = null;
+        Node headL = head;
+
+        Node sortedL = sortList(headL);
+        Node sortedR = sortList(headR);
+        return merge(sortedL,sortedR);
+    }
+
+    public static Node findMid(Node head) {
+        Node slow = head;
+        Node fast = head;
+        while(fast.next != null && fast.next.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
     }
     public static Node merge(Node nodeL, Node nodeR){
-        
+
         if(nodeL==null) return nodeR;
         if(nodeR==null) return nodeL;
 
