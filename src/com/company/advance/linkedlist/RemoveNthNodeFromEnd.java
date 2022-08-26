@@ -1,4 +1,4 @@
-package com.company.linkedlist;
+package com.company.advance.linkedlist;
 
 public class RemoveNthNodeFromEnd {
     public static void main(String[] args) {

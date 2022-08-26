@@ -1,9 +1,9 @@
-package com.company.linkedlist.mergesort;
+package com.company.advance.linkedlist.mergesort;
 
-import com.company.linkedlist.LLCreation;
-import com.company.linkedlist.Node;
+import com.company.advance.linkedlist.LLCreation;
+import com.company.advance.linkedlist.Node;
 
-import static com.company.linkedlist.LLCreation.createLL;
+import static com.company.advance.linkedlist.LLCreation.createLL;
 
 public class SortALinkedList {
     public static void main(String[] args) {

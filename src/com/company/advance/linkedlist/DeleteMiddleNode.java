@@ -1,4 +1,4 @@
-package com.company.linkedlist;
+package com.company.advance.linkedlist;
 
 public class DeleteMiddleNode {
     public static void main(String[] args) {

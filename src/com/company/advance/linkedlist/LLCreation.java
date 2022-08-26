@@ -1,4 +1,4 @@
-package com.company.linkedlist;
+package com.company.advance.linkedlist;
 
 
 public class LLCreation {
@@ -30,6 +30,16 @@ public class LLCreation {
         System.out.print("NULL");
         System.out.println();
     }
+    public static void traverseDoubleLL(DoubleLLNode node) {
+        DoubleLLNode address = node;
+        System.out.print("head ->");
+        while(address != null) {
+            System.out.print(" <-[ "+address.data+" ]->");
+            address = address.next;
+        }
+        System.out.print("NULL");
+        System.out.println();
+    }
     public static void countNodesLL(Node node) {
         int count = 0;
         Node temp = node;
@@ -41,8 +51,10 @@ public class LLCreation {
     }
     public static Node createNodeLL(int val) {
         Node node = new Node(val);
-        node.data = val;
-        node.next = null;
+        return node;
+    }
+    public static DoubleLLNode createNodeDoubleLL(int val) {
+        DoubleLLNode node = new DoubleLLNode(val);
         return node;
     }
 
@@ -51,6 +63,16 @@ public class LLCreation {
         Node temp = head;
         for(int i = 1 ; i < numbers.length; i++) {
             Node currNode = createNodeLL(numbers[i]);
+            temp.next = currNode;
+            temp = temp.next;
+        }
+        return head;
+    }
+    public static DoubleLLNode createDoubleLL(int[] numbers) {
+        DoubleLLNode head = new DoubleLLNode(numbers[0]);
+        DoubleLLNode temp = head;
+        for(int i = 1 ; i < numbers.length; i++) {
+            DoubleLLNode currNode = createNodeDoubleLL(numbers[i]);
             temp.next = currNode;
             temp = temp.next;
         }
