@@ -4,9 +4,19 @@ import com.company.advance.linkedlist.LLCreation;
 import com.company.advance.linkedlist.Node;
 
 public class LLBasedQueue {
-    Node tail;
+    static Node tail;
+    static Node head = null;
+    public static void main(String[] args) {
+        /*Node eRes = enQueue(head,1);
+        Node eRes1 = enQueue(eRes,2);
+        Node eRes2 = enQueue(eRes1,3);
+
+        Node dRes = deQueue(eRes2);
+        Node dRes1 = deQueue(dRes);*/
+
+    }
     public Node enQueue(Node head,int x) {
-        Node temp = LLCreation.createNodeLL(3);
+        Node temp = LLCreation.createNodeLL(x);
         if(head == null){
             head = temp;
             tail = temp;
@@ -17,7 +27,7 @@ public class LLBasedQueue {
         }
         return head;
     }
-    public Node deQueue(Node head) {
+    public  Node deQueue(Node head) {
         if(head == null) return null;
         if(head == tail) {
             //free(temp); -- in java its done automatically by GC
