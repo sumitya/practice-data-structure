@@ -2,13 +2,22 @@ package com.company.advance.tree;
 
 public class CountNodesOfTree {
     public static void main(String[] args) {
-        TreeNode root = new TreeNode("A");
-        root.left = new TreeNode("B");
-        root.left.left = new TreeNode("D");
-        root.left.left.right = new TreeNode("L");
-        root.left.left.left = new TreeNode("M");
-        root.left.left.left.left = new TreeNode("N");
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.right.left = new TreeNode(4);
+        root.right.left.right = new TreeNode(5);
         System.out.println(getCount(root));
+
+        /**
+         *       1
+         * 		/ \
+         * 	   2    3
+         * 		  /
+         * 		4
+         * 		 \
+         * 		  5
+         * */
     }
     public static int getCount(TreeNode root) {
         if(root == null) return 0;
