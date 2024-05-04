@@ -2,11 +2,25 @@ package com.company.advance.heap;
 
 import java.util.Arrays;
 
-public class PercolateDownHeap {
-    static int[] heapArr = new int[]{10 ,20, 30, 15, 16, 28, 29, 40};
+public class DeleteRootOfHeap {
+    static int[] heapArr = new int[]{40, 30, 28, 29, 16, 10, 20, 15};
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(creatingMaxHeapOutOfArray(heapArr,7)));
+        System.out.println(Arrays.toString(deleteRoot(heapArr)));
     }
+
+    public static int[] deleteRoot(int[] heapArr) {
+        //swap the root with last element
+        int temp = heapArr[heapArr.length-1];
+        heapArr[heapArr.length-1] = heapArr[0];
+        heapArr[0] = temp;
+
+        // last element = last element -- , i.e, pass lastfilledIndex = last element --;
+        // and call percolateDown
+        creatingMaxHeapOutOfArray(heapArr,6);
+
+        return heapArr;
+    }
+
     public static int[] creatingMaxHeapOutOfArray(int[] heapArr,int lastFilledIndex) {
         for(int i = heapArr.length; i >= 0; i--) {
             // here i is different roots of subtree
@@ -54,4 +68,7 @@ public class PercolateDownHeap {
         }
         return heapArr;
     }
+
+
+    // PercolateDown(root)
 }
