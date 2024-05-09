@@ -1,4 +1,4 @@
-package com.company.LC;
+package com.company.LC.heap;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;
