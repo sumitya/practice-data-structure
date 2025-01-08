@@ -1,4 +1,4 @@
-package com.company.LC;
+package com.company.LC.array2d;
 
 import java.util.ArrayList;
 import java.util.List;

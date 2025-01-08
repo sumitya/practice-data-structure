@@ -1,4 +1,4 @@
-package com.company.LC;
+package com.company.LC.array2d;
 
 class SpiralMatrix_59 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.company.LC;
+package com.company.LC.array2d;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,11 @@ public class DiagnalTraverse_498 {
         // 1 2 3
         // 4 5 6
         // 7 8 9
-        int[][] matrix = new int[][]{{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+        int[][] matrix = new int[][]{
+                {1,2,3,4},
+                {5,6,7,8},
+                {9,10,11,12},
+                {13,14,15,16}};
 
         List<List<Integer>> out = new ArrayList<>();
         ArrayList<Integer> in1 = new ArrayList<>();
@@ -40,7 +44,7 @@ public class DiagnalTraverse_498 {
         out.add(in4);
 
         int[] resMatrix = diagonal(out);
-        for (int i =0; i< resMatrix.length;i++) {System.out.print(resMatrix[i]+"\n");}
+        for (int i =0; i< resMatrix.length;i++) {System.out.print(resMatrix[i]+" ");}
 
     }
     public static int[] diagonal(List<List<Integer>> nums) {
