@@ -1,6 +1,10 @@
 package com.practice.sorting;
 
+
 public class NobelElement {
+    // Nobel Element: {no. of elements < A[i] } = A[i]
+    // 1 1 2
+    // 0 1 2  --> here 2 is nobel
     public static void main(String[] args) {
         int arr1[] = {-10,1,1,1,4,4,4,7,10};
         int arr2[] = {-10,1,1,2,4,4,4,8,10};
